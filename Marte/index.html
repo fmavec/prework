@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tu peso fuera de este mundo</title>
+  </head>
+  <body>
+    <h1>Tu peso fuera de este mundo</h1>
+    <p>¿Sabías que tú peso en otros planetas es distinto al que tienes en el planeta tierra?</p>
+
+    <script type="text/javascript">
+      var usuario = prompt("¿Cuál es tu peso?");
+      var peso = parseFloat(usuario);
+      var planeta = prompt("¿En qué planeta? \n1. para Marte \n2. para Jupiter");
+      planeta = parseInt(planeta);
+      var g_tierra = 9.8;
+      var g_marte = 3.7;
+      var g_jupiter = 24.8;
+      var peso_final;
+      if (planeta == 1){
+        peso_final = (peso * g_marte)/g_tierra;
+        //parseint lo vuelve entero, mejor:
+        peso_final = peso_final.toFixed(3);
+        document.write("Tu peso en Marte es <strong>" + peso_final + " Kilos</strong>");
+      } else if (planeta == 2){
+        peso_final = (peso * g_jupiter)/g_tierra;
+        //parseint lo vuelve entero, mejor:
+        peso_final = peso_final.toFixed(3);
+        document.write("Tu peso en Jupiter es <strong>" + peso_final + " Kilos</strong>");
+      } else {
+        document.write("Eso esta a muchos años luz de distancia")
+      }
+    </script>
+  </body>
+</html>
